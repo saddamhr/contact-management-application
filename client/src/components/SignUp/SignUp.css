@@ -1,0 +1,43 @@
+.admin-login {
+    width: 40% !important;
+    box-shadow: 1px -6px 2.2px rgba(0, 0, 0, 0.034), -1px -4px 5.3px rgba(0, 0, 0, 0.048),
+        0px -7px 10px rgba(0, 0, 0, 0.06), 0px -1px 17.9px rgba(0, 0, 0, 0.072), 0px 5px 33.4px rgba(0, 0, 0, 0.086),
+        0px 53px 80px rgba(0, 0, 0, 0.12);
+
+    /* 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12); */
+
+    min-height: 450px;
+    /* margin: 100px auto; */
+    margin: 100px auto;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+input[type="username"],
+input[type="password"] {
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #1bce7c;
+}
+
+@media screen and (max-width: 500px) {
+    .admin-login {
+        width: 90% !important;
+        min-height: 450px;
+    }
+    .text-center {
+        font-size: 40px !important;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 768px) {
+    .admin-login {
+        width: 60% !important;
+        min-height: 400px;
+    }
+}
