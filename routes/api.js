@@ -4,7 +4,7 @@ const passwordHash = require('password-hash');
 // const passwordHash = require('./lib/password-hash');
 
 // IMPORT MODELS
-const BlogPost = require("../models/blogPost");
+const AddUser = require("../models/addUser");
 const FormPost = require("../models/Form");
 const User = require("../models/admin");
 const TestAdmin = require('../models/TestAdmin');
@@ -16,7 +16,7 @@ const route = require("./Form");
 
 // GET BLOG POST
 router.get("/", (req, res) => {
-  BlogPost.find({}).then((data) => {
+  AddUser.find({}).then((data) => {
     res.json(data);
   });
 });
@@ -26,9 +26,9 @@ router.post("/save", (req, res) => {
   console.log("Body: ", req.body);
   const data = req.body;
 
-  const newBlogPost = new BlogPost(data);
+  const newAddUser = new AddUser(data);
 
-  newBlogPost.save((error) => {
+  newAddUser.save((error) => {
     if (error) {
       res.status(500).json({ msg: "Sorry, internal server errors" });
       return;

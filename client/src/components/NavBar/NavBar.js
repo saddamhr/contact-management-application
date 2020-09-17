@@ -22,6 +22,9 @@ const NavBar = () => {
 
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto" style={{ fontSize: '0.8rem', fontWeight: 'bold' }}>
+                            <li class="nav-item">
+                                    <NavLink className="nav-link NavBar-item" to="/">Home</NavLink>
+                                </li>
                                 <li class="nav-item">
                                     <NavLink className="nav-link NavBar-item" to="/signup">Signup</NavLink>
                                 </li>

@@ -9,32 +9,7 @@ class App extends React.Component {
         district: "",
         phone: "",
         email: "",
-        persons: []
     };
-
-    // constructor(props) {
-    //     super(props);
-    //     this.deleteStudent = this.deleteStudent.bind(this);
-    //     console.log("PROPS", props);
-    // }
-
-    // componentDidMount = () => {
-    //     this.getBlogPost();
-    // };
-
-    // getBlogPost = () => {
-    //     axios
-    //         .get("/api")
-    //         .then((response) => {
-    //             const data = response.data;
-    //             this.setState({ posts: data, loading: false });
-    //             console.log("Data has been received!!");
-    //         })
-    //         .catch(() => {
-    //             console.log("Error retrieving data!!!");
-    //             // alert("Error retrieving data!!!");
-    //         });
-    // };
 
     handleChange = ({ target }) => {
         const { name, value } = target;
@@ -61,6 +36,7 @@ class App extends React.Component {
                 console.log("Data has been sent to the server");
                 this.resetUserInputs();
                 // this.getBlogPost();
+                alert('Person added to the mongoDB!')
             })
             .catch(() => {
                 console.log("ERROR!!!");
@@ -73,67 +49,6 @@ class App extends React.Component {
             body: "",
         });
     };
-
-    // displayBlogPost = (posts) => {
-    //     if (!posts.length) return null;
-
-    //     return posts.map((post, index) => (
-
-    //         <div className='card' id='blog_info_card'>
-    //             <div className='card-body'>
-    //                 <h6 className='card-subtitle mb-2 '>{post.title}</h6>
-    //                 <hr className='hr_line' />
-    //                 <p className='card-text'>{post.body}</p>
-    //                 <div className='collapse' id='card1'>
-    //                     <p>
-    //                         grants for pensioners are provided by the ‘Big Six’ energy
-    //                         suppliers – Scottish Power, British Gas, EON, EDF, SSE and nPower
-    //                         – as part of their responsibility to help in the reduction of
-    //                         carbon emissions across domestic households. Over the past few
-    //                         years, we have supplied thousands of homes, including free boiler
-    //                         replacement for pensioners across the UK, helping them drive down
-    //                         the costs of heating their homes and reducing their overall carbon
-    //                         footprint. This has huge benefits for the bank balances of
-    //                         pensioners as well as a positive impact on the wider environment.
-    //         </p>
-    //                     <h4> How do I access boiler grants for pensioners? </h4>
-
-    //                     <p>
-    //                         If you or anyone else in your household receives Pension Credits,
-    //                         or any other benefits from the UK government, then it’s highly
-    //                         likely that you’ll be eligible for our boiler replacement grant
-    //                         scheme. Alongside Pension Credits, the other income-related
-    //                         benefits include:
-    //           <ul>
-    //                             <li> Child Tax Credit </li>
-    //                             <li> Income related Employment Support Allowance </li>
-    //                             <li> Income based Job Seekers Allowance </li>
-    //                             <li> Income Support </li>
-    //                         </ul>
-    //                     </p>
-    //                 </div>
-    //             </div>
-    //             <div className='btn-group update-dlt'>
-    //                 <button
-    //                     onClick={() => this.changeToUpdate(post)}
-    //                     className='btn readMore'
-    //                     type='button'
-    //                     style={{ margin: "1rem" }}
-    //                 >
-    //                     UPDATE
-    //       </button>
-
-    //                 <button
-    //                     onClick={() => this.deleteStudent(post._id)}
-    //                     className='btn readMore'
-    //                     type='button'
-    //                 >
-    //                     DELETE
-    //       </button>
-    //             </div>
-    //         </div>
-    //     ));
-    // };
 
 
 
