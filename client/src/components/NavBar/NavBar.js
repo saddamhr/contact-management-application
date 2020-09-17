@@ -5,7 +5,7 @@ import './NavBar.css'
 
 const NavBar = () => {
     return (
-        <div className="container" id="NavBar-sec">
+        <div style={{background: '#1BCE7C', color: '#fff'}} className="container" id="NavBar-sec">
             <div className="row">
                 <div className="col-md-12">
                     <nav className="navbar navbar-expand-lg navbar-light">
