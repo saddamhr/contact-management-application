@@ -6,10 +6,17 @@ import './AllPersons.css'
 class AllPersons extends Component {
   state = {
     persons: [],
-    input: ""
+    input: "",
+    districtInput: ""
   };
 
   handleChange = ({ target }) => {
+    const { name, value } = target;
+
+    this.setState({ [name]: value });
+  };
+
+  handleDisChange = ({ target }) => {
     const { name, value } = target;
 
     this.setState({ [name]: value });
@@ -56,6 +63,12 @@ class AllPersons extends Component {
         return i.name.toLowerCase().match(this.state.input);
       })
     }
+
+    if (this.state.districtInput.length > 0) {
+      this.state.persons = this.state.persons.filter((i) => {
+        return i.district.toLowerCase().match(this.state.districtInput);
+      })
+    }
     return (
       <div style={{ marginLeft: '220px' }} className='col-md-6'>
         <h1>All Persons List</h1>
@@ -70,10 +83,10 @@ class AllPersons extends Component {
 
           <input
             type='text'
-            name='input'
-            value={this.state.input}
-            onChange={this.handleChange}
-            placeholder='Search by name'
+            name='districtInput'
+            value={this.state.districtInput}
+            onChange={this.handleDisChange}
+            placeholder='Filter by district'
           />
         </div>
         <div style={{ marginTop: '20px' }}>
